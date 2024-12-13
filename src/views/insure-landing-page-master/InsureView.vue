@@ -217,7 +217,7 @@ function clickMenu() {
       </h1>
 
       <div
-        class="hover:bg-[#fafafa] lg:cursor-pointer  hover:text-[#2d2640] font-mono font-bold text-base border-2 py-2 px-5 uppercase text-center w-fit mx-auto lg:mx-0 tracking-widest"
+        class="hover:bg-[#fafafa]  cursor-pointer  hover:text-[#2d2640] font-mono font-bold text-base border-2 py-2 px-5 uppercase text-center w-fit mx-auto lg:mx-0 tracking-widest"
       >
         how we work
       </div>
@@ -304,6 +304,15 @@ function clickMenu() {
   --Very-Dark-Violet: #2b272f;
   --Dark-Grayish-Violet: #837d87;
   --Very-Light-Gray: #fafafa;
+}
+
+.forced-bla{
+  cursor:pointer !important;
+}
+
+.forced-bla:hover{
+  background-color: var(--Very-Light-Gray);
+  color:var(--Dark-Violet)
 }
 
 .karla-family {

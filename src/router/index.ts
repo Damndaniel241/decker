@@ -1,4 +1,6 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory,RouteRecordRaw } from "vue-router";
+import KryptaIndex from "./modules/kryptaIndex";
+import PasterIndex from "./modules/PasterIndex";
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -24,7 +26,9 @@ export const router = createRouter({
             path: "/insure-landing-page",
             name:"InsureView",
             component: () => import("@/views/insure-landing-page-master/InsureView.vue"),
-          }
+          },
+          ...KryptaIndex,
+          ...PasterIndex,
     ]
 
 })
