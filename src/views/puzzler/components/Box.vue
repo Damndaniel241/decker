@@ -38,7 +38,7 @@ const getBackgroundStyle = computed(() => {
     if (props.isComplete) {
       // Display the last part of the image when the puzzle is complete
       return {
-        backgroundImage: "url('/src/views/puzzler/assets/photo-grid-1.avif')",
+        backgroundImage: "url('/public/photo-grid-1.avif')",
         backgroundSize: `${gridSize * 100}% ${gridSize * 100}%`,
         backgroundPosition: `${(gridSize - 1) * tileSize}% ${(gridSize - 1) * tileSize}%`,
         backgroundRepeat: "no-repeat",
@@ -56,7 +56,7 @@ const getBackgroundStyle = computed(() => {
   const y = Math.floor(tileIndex / gridSize); // Row index of the tile
 
   return {
-    backgroundImage: `url('/src/views/puzzler/assets/photo-grid-1.avif')`, // Path to your image
+    backgroundImage: "url('/public/photo-grid-1.avif')", // Path to your image
     backgroundSize: `${gridSize * 100}% ${gridSize * 100}%`, // Scale the image to fit all tiles
     // backgroundSize: `400px 400px`, // Scale the image to fit all tiles
     backgroundPosition: `${x * tileSize}% ${y * tileSize}%`, // Adjust position to fit the tile
