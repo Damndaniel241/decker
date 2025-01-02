@@ -10,12 +10,12 @@ import 'primeicons/primeicons.css'
 
 
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+// const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 
-if (!PUBLISHABLE_KEY) {
-    throw new Error('Missing Publishable Key')
-  }
+// if (!PUBLISHABLE_KEY) {
+//     throw new Error('Missing Publishable Key')
+//   }
 
 const app = createApp(App);
 const pinia = createPinia();
@@ -23,7 +23,7 @@ const pinia = createPinia();
 app.component('QuillEditor', QuillEditor);
 app.use(pinia);
 app.use(router);
-app.use(clerkPlugin, {
-    publishableKey: PUBLISHABLE_KEY
-  })
+// app.use(clerkPlugin, {
+//     publishableKey: PUBLISHABLE_KEY
+//   })
 app.mount("#app");
