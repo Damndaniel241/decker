@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import KryptaIndex from "./modules/kryptaIndex";
+// import KryptaIndex from "./modules/kryptaIndex";
 import PasterIndex from "./modules/PasterIndex";
 import PuzzlerIndex from "./modules/PuzzlerIndex";
 
@@ -28,7 +28,7 @@ export const router = createRouter({
             name:"InsureView",
             component: () => import("@/views/insure-landing-page-master/InsureView.vue"),
           },
-          ...KryptaIndex,
+          // ...KryptaIndex,
           ...PasterIndex,
           ...PuzzlerIndex,
     ]
