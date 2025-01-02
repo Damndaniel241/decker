@@ -11,6 +11,7 @@
     <RouterLink :to="{name:'InsureView'}" class=" mx-2 underline text-[#be4444]">insure-landing-page</RouterLink>
     <RouterLink :to="{name:'KryptaIndex'}" class=" mx-2 underline text-[#be4444]">krypta</RouterLink>
     <RouterLink :to="{name:'PasterIndex'}" class=" mx-2 underline text-[#be4444]">paster</RouterLink>
+    <RouterLink :to="{name:'PuzzlerIndex'}" class=" mx-2 underline text-[#be4444]">puzzler</RouterLink>
     <!-- <RouterLink :to="{name:'InsureView'}" class="underline text-[#be4444]">insure-landing-page</RouterLink> -->
   </div>
 
