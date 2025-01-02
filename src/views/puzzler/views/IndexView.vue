@@ -175,7 +175,7 @@ function getZeroPos(){
 </script>
 
 <template>
-  <div class="flex  justify-center items-center h-full select-none gap-[7em]">
+  <div class="flex flex-col  lg:flex-row justify-center items-center lg:h-full select-none lg:gap-[7em] gap-[3em]">
     <div>
     <div v-for="(row,rowIndex) in grid" :key="rowIndex" class=" flex border border-black">
       <div class="flex">
@@ -196,6 +196,6 @@ function getZeroPos(){
 <div >
   <img src="/src/views/puzzler/assets/photo-grid-1.avif" alt="" class="h-[400px] w-[400px] " >
 </div>
-<p v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
+<p class="text-green-500" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
   </div>
 </template>
