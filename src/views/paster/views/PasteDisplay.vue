@@ -27,7 +27,7 @@ async function getBucket() {
 
 function copyCodeToClipBoard(){
   if(formattedContent.value){
-    navigator.clipboard.writeText(formattedContent.value);
+    navigator.clipboard.writeText(formattedContent.value.toString());
     clipboardTextCode.value = "copied"
   }
 }
