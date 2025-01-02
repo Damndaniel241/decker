@@ -9,7 +9,7 @@ import HeroImageDesktop from "./images/image-intro-desktop.jpg";
 import BgPatternIntroRightMobile from "./images/bg-pattern-intro-right-mobile.svg";
 import BgPatternIntroRightDesktop from "./images/bg-pattern-intro-right-desktop.svg";
 import BgPatternIntroLeftMobile from "./images/bg-pattern-intro-left-mobile.svg";
-// import BgPatternIntroLeftDesktop from "./images/bg-pattern-intro-left-Desktop.svg";
+import BgPatternIntroLeftDesktop from "./images/bg-pattern-intro-left-desktop.svg";
 import IconSnappyProcess from "./images/icon-snappy-process.svg";
 import IconPeopleFirst from "./images/icon-people-first.svg";
 import IconAffordablePrices from "./images/icon-affordable-prices.svg";
@@ -122,7 +122,7 @@ function clickMenu() {
 
   <section id="humanizing-your-insurance-desktop" class="hidden lg:block bg-[#2d2640] relative ">
     <img
-    src="./images/bg-pattern-intro-left-Desktop.svg"
+      :src="BgPatternIntroLeftDesktop"
       alt="bg-pattern-intro-left-desktop"
       class="absolute top-[450px] left-px"
     />
