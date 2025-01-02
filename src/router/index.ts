@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory,RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import KryptaIndex from "./modules/kryptaIndex";
 import PasterIndex from "./modules/PasterIndex";
 import PuzzlerIndex from "./modules/PuzzlerIndex";

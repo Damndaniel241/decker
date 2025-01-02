@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref,computed } from "vue";
+import { ref } from "vue";
 import Box from "../components/Box.vue";
 // const grid = ref([[0], [1, 2, 3], [4, 5, 6], [7, 8, 9]]);
 const grid = ref([ [0, 1, 2, 3],[4, 5, 6, 7], [8,9,10,11],[12,13,14,15]]);
@@ -8,7 +8,7 @@ const correctGrid = ref([[1, 2, 3, 4],[ 5, 6, 7, 8],[9,10,11,12],[13,14,15,0]]);
 
 
 // const imageUrl = "https://unsplash.com/photos/brown-bear-near-grass-field-kZ8dyUT0h30"
-const imageUrl = "/src/views/puzzler/assets/photo-grid-1.avif"
+// const imageUrl = "/src/views/puzzler/assets/photo-grid-1.avif"
 
 
 
