@@ -38,7 +38,7 @@ const getBackgroundStyle = computed(() => {
     if (props.isComplete) {
       // Display the last part of the image when the puzzle is complete
       return {
-        backgroundImage: `url('/src/views/puzzler/assets/photo-grid-1.avif')`,
+        backgroundImage: "url('/src/views/puzzler/assets/photo-grid-1.avif')",
         backgroundSize: `${gridSize * 100}% ${gridSize * 100}%`,
         backgroundPosition: `${(gridSize - 1) * tileSize}% ${(gridSize - 1) * tileSize}%`,
         backgroundRepeat: "no-repeat",
