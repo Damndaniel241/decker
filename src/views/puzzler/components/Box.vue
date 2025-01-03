@@ -6,6 +6,7 @@ const props = defineProps({
   posR: { type: Number, required: true },
   posC: { type: Number, required: true },
   isComplete: { type: Boolean, required: false }, // New prop to indicate if the puzzle is solved
+  textOn: {type:Boolean,required:false},
 //   isSolved: Boolean, // Pass this prop to indicate if the puzzle is solved
 //   imageUrl: String,
 });
@@ -74,10 +75,11 @@ const getBackgroundStyle = computed(() => {
 
 <template>
   <button
+  
   :style="getBackgroundStyle"
     class="p-2 border cursor-pointer border-black w-[6rem] h-[6rem] text-white text-lg"
   >
-    <!-- {{ props.title != "0" ? props.title : " " }} -->
+   <span v-if="props.textOn"> {{ props.title != "0" ? props.title : " " }}</span>
   </button>
 </template>
 

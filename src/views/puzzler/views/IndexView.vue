@@ -7,8 +7,12 @@ const grid = ref([ [0, 1, 2, 3],[4, 5, 6, 7], [8,9,10,11],[12,13,14,15]]);
 const correctGrid = ref([[1, 2, 3, 4],[ 5, 6, 7, 8],[9,10,11,12],[13,14,15,0]]);
 
 
+const isTextOn = ref<Boolean>(false);
+
 // const imageUrl = "https://unsplash.com/photos/brown-bear-near-grass-field-kZ8dyUT0h30"
 // const imageUrl = "/src/views/puzzler/assets/photo-grid-1.avif"
+
+
 
 
 
@@ -185,17 +189,21 @@ function getZeroPos(){
           <!-- <div>{{colIndex }}</div> -->
         </div>
           <!-- <Box @click="getZeroPos(rowIndex,colIndex)" :title="String(elem)" :posR="rowIndex" :posC="colIndex" /> -->
-          <Box @click="swapWithZero(rowIndex,colIndex,elem)" :title="String(elem)" :posR="rowIndex" :posC="colIndex"  :isComplete="getCurrentState()"
+          <Box @click="swapWithZero(rowIndex,colIndex,elem)" :title="String(elem)" :posR="rowIndex" :posC="colIndex"  :isComplete="getCurrentState()" :textOn="isTextOn"
            />
           
         </div>
       </div>
     </div>
 </div>
-
+<span class="flex gap-2 lg:hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span>
+<p class="text-green-500 lg:hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
+  
 <div >
   <img src="/src/views/puzzler/assets/photo-grid-1.avif" alt="" class="h-[400px] w-[400px] " >
 </div>
-<p class="text-green-500" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
-  </div>
+</div>
+<span class=" gap-2 lg:flex hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span>
+<p class="text-green-500 lg:block hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
+
 </template>
