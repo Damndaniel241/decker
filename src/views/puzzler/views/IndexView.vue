@@ -199,14 +199,14 @@ function getZeroPos(){
       </div>
     </div>
 </div>
-<div class="flex gap-3 "><span>moves:{{ moves }}</span><span class="flex gap-2 lg:hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span></div>
+<div class="flex gap-3 "><span>moves:{{ moves }}</span><span class="flex gap-2 lg:hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle numbers</span></span></div>
 <p class="text-green-500 lg:hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
   
 <div >
   <img src="/src/views/puzzler/assets/photo-grid-1.avif" alt="" class="h-[400px] w-[400px] " >
 </div>
 </div>
-<div class="flex gap-3 "><span>moves:{{ moves }}</span><span class=" gap-2 lg:flex lg:justify-center hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span></div>
+<div class="flex gap-3 "><span>moves:{{ moves }}</span><span class=" gap-2 lg:flex lg:justify-center hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle numbers</span></span></div>
 <p class="text-green-500 text-center lg:block hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
 
 </template>
