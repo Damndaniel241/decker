@@ -7,7 +7,8 @@ const grid = ref([ [0, 1, 2, 3],[4, 5, 6, 7], [8,9,10,11],[12,13,14,15]]);
 const correctGrid = ref([[1, 2, 3, 4],[ 5, 6, 7, 8],[9,10,11,12],[13,14,15,0]]);
 
 
-const isTextOn = ref<Boolean>(false);
+const isTextOn = ref(false);
+const moves = ref(0);
 
 // const imageUrl = "https://unsplash.com/photos/brown-bear-near-grass-field-kZ8dyUT0h30"
 // const imageUrl = "/src/views/puzzler/assets/photo-grid-1.avif"
@@ -133,6 +134,7 @@ function swapWithZero(x:number,y:number,title:number){
           if(x+1===zeroX && y+0===zeroY || x+0===zeroX && y+1===zeroY || x-1===Math.abs(zeroX) && y-0===Math.abs(zeroY) || x-0===Math.abs(zeroX) && y-1===Math.abs(zeroY)){
             grid.value[i][j] = title;
             grid.value[x][y] = 0;
+            moves.value = moves.value+1
             getCurrentState();
           }else{
             return;
@@ -141,6 +143,7 @@ function swapWithZero(x:number,y:number,title:number){
           if(x-1===Math.abs(zeroX) && y-0===Math.abs(zeroY) || x-0===Math.abs(zeroX) && y-1===Math.abs(zeroY) || x+1===zeroX && y+0===zeroY || x+0===zeroX && y+1===zeroY){
             grid.value[i][j] = title;
             grid.value[x][y] = 0;
+            moves.value = moves.value+1
             getCurrentState();
         }else{
             return;
@@ -196,14 +199,14 @@ function getZeroPos(){
       </div>
     </div>
 </div>
-<span class="flex gap-2 lg:hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span>
+<div class="flex gap-3 "><span>moves:{{ moves }}</span><span class="flex gap-2 lg:hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span></div>
 <p class="text-green-500 lg:hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
   
 <div >
   <img src="/src/views/puzzler/assets/photo-grid-1.avif" alt="" class="h-[400px] w-[400px] " >
 </div>
 </div>
-<span class=" gap-2 lg:flex hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span>
-<p class="text-green-500 lg:block hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
+<div class="flex gap-3 "><span>moves:{{ moves }}</span><span class=" gap-2 lg:flex lg:justify-center hidden"><input type="checkbox" class="accent-pink-500"  v-model="isTextOn"><span>toggle text</span></span></div>
+<p class="text-green-500 text-center lg:block hidden" v-if="getCurrentState()">Congratulations! Puzzle Solved!</p>
 
 </template>
