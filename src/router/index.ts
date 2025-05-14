@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import KryptaIndex from "./modules/kryptaIndex";
 import PasterIndex from "./modules/PasterIndex";
 import PuzzlerIndex from "./modules/PuzzlerIndex";
+import MikaIndex from "./modules/MikaIndex"
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -31,6 +32,7 @@ export const router = createRouter({
           // ...KryptaIndex,
           ...PasterIndex,
           ...PuzzlerIndex,
+          ...MikaIndex,
     ]
 
 })
